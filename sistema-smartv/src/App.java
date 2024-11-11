@@ -7,6 +7,8 @@ public class App {
        System.out.println(smartTv.volume);
 
        smartTv.ligar();
+       smartTv.marca = args[0];
        System.out.println(smartTv.ligada);
+       System.out.println(smartTv.marca);
     }
 }

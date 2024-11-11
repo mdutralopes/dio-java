@@ -2,6 +2,7 @@ public class SmartTv {
     Boolean ligada = false;
     Integer canal = 1;
     Integer volume = 25;
+    String marca;
 
     public void ligar()
     {
