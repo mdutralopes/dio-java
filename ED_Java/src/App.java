@@ -31,18 +31,42 @@ public class App {
         System.out.println(minhaPilha);
 
         // Fila
-        Fila minhaFila = new Fila();
+        Fila<String> minhaFila = new Fila<String>();
 
-        minhaFila.enqueue(new NoFila("Primeiro"));
-        minhaFila.enqueue(new NoFila("Segundo"));
-        minhaFila.enqueue(new NoFila("Terceiro"));
-        minhaFila.enqueue(new NoFila("Quarto"));
+        // minhaFila.enqueue(new NoFila("Primeiro"));
+        // minhaFila.enqueue(new NoFila("Segundo"));
+        // minhaFila.enqueue(new NoFila("Terceiro"));
+        // minhaFila.enqueue(new NoFila("Quarto"));
+
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
 
         System.out.println(minhaFila);
         System.out.println(minhaFila.first());
         System.out.println(minhaFila.dequeue());
         System.out.println(minhaFila);
-        minhaFila.enqueue(new NoFila("Último"));
+        minhaFila.enqueue("Último");
         System.out.println(minhaFila);
-    }
+
+        // Lista Circular
+        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
+
+        minhaListaCircular.add("c0");
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.add("c1");
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.add("c2");
+        minhaListaCircular.add("c3");
+        System.out.println(minhaListaCircular);
+
+        System.out.println(minhaListaCircular.get(7));
+        System.out.println(minhaListaCircular.get(323));
+    }    
 }
