@@ -33,60 +33,23 @@ public class App {
         System.out.println(minhaPilha);
 
         // Fila
-        System.out.println("Fila ============================");
         Fila minhaFila = new Fila();
 
-        minhaFila.enqueue(new NoFila("Primeiro"));
-        minhaFila.enqueue(new NoFila("Segundo"));
-        minhaFila.enqueue(new NoFila("Terceiro"));
-        minhaFila.enqueue(new NoFila("Quarto"));
+        // minhaFila.enqueue(new NoFila("Primeiro"));
+        // minhaFila.enqueue(new NoFila("Segundo"));
+        // minhaFila.enqueue(new NoFila("Terceiro"));
+        // minhaFila.enqueue(new NoFila("Quarto"));
+
+        minhaFila.enqueue("Primeiro");
+        minhaFila.enqueue("Segundo");
+        minhaFila.enqueue("Terceiro");
+        minhaFila.enqueue("Quarto");
 
         System.out.println(minhaFila);
         System.out.println(minhaFila.first());
         System.out.println(minhaFila.dequeue());
         System.out.println(minhaFila);
-        minhaFila.enqueue(new NoFila("Último"));
+        minhaFila.enqueue("Último");
         System.out.println(minhaFila);
-
-        // Lista encadeada
-        System.out.println("Lista encadeada ==========================");
-        ListaEncadeada<String> minhaListaEncadeada = new ListaEncadeada<String>();
-
-        minhaListaEncadeada.add("teste1");
-        minhaListaEncadeada.add("teste2");
-        minhaListaEncadeada.add("teste3");
-        minhaListaEncadeada.add("teste4");
-
-        System.out.println(minhaListaEncadeada.get(0));
-        System.out.println(minhaListaEncadeada.get(1));
-        System.out.println(minhaListaEncadeada.get(2));
-        System.out.println(minhaListaEncadeada.get(3));
-
-        System.out.println(minhaListaEncadeada);
-
-        minhaListaEncadeada.remove(2);
-
-        System.out.println(minhaListaEncadeada);
-
-        // Lista duplamente encadeada
-        System.out.println("Lista duplamente encadeada");
-        ListaDuplamenteEncadeada<String> minhaListaDpEncadeada = new ListaDuplamenteEncadeada<>();
-
-        minhaListaDpEncadeada.add("c1");
-        minhaListaDpEncadeada.add("c2");
-        minhaListaDpEncadeada.add("c3");
-        minhaListaDpEncadeada.add("c4");
-        minhaListaDpEncadeada.add("c5");
-        minhaListaDpEncadeada.add("c6");
-        minhaListaDpEncadeada.add("c7");
-
-        System.out.println(minhaListaDpEncadeada);
-
-        minhaListaDpEncadeada.remove(3);
-        minhaListaDpEncadeada.add(3, "99");
-
-        System.out.println(minhaListaDpEncadeada);
-        System.out.println(minhaListaDpEncadeada.get(3));
-
     }
 }
