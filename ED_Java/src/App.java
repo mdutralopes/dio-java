@@ -2,6 +2,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         // Nós com Generics
+        System.out.println("Nós==============================");
         No<String> no1 = new No<String>("Conteúdo nó 1");
 
         No<String> no2 = new No<String>("Conteúdo nó 2");
@@ -18,6 +19,7 @@ public class App {
         System.out.println(no2.getProximoNo());
 
         // Pilha
+        System.out.println("Pilhas =============================");
         Pilha minhaPilha = new Pilha();
         minhaPilha.push(new No<Integer>(1));
         minhaPilha.push(new No<Integer>(2));
@@ -31,7 +33,7 @@ public class App {
         System.out.println(minhaPilha);
 
         // Fila
-        Fila<String> minhaFila = new Fila<String>();
+        Fila minhaFila = new Fila();
 
         // minhaFila.enqueue(new NoFila("Primeiro"));
         // minhaFila.enqueue(new NoFila("Segundo"));
@@ -49,24 +51,5 @@ public class App {
         System.out.println(minhaFila);
         minhaFila.enqueue("Último");
         System.out.println(minhaFila);
-
-        // Lista Circular
-        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
-
-        minhaListaCircular.add("c0");
-        System.out.println(minhaListaCircular);
-
-        minhaListaCircular.remove(0);
-        System.out.println(minhaListaCircular);
-
-        minhaListaCircular.add("c1");
-        System.out.println(minhaListaCircular);
-
-        minhaListaCircular.add("c2");
-        minhaListaCircular.add("c3");
-        System.out.println(minhaListaCircular);
-
-        System.out.println(minhaListaCircular.get(7));
-        System.out.println(minhaListaCircular.get(323));
-    }    
+    }
 }
