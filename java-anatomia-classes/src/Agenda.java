@@ -20,22 +20,20 @@ public class Agenda {
      */
     public static void main(String[] args) {
         System.out.println("--\tOrdem aleatória\t--");
-        Map<Integer, Contato> agenda = new HashMap<>() {{
-           put(1, new Contato("Simba", 5555));
-           put(4, new Contato("Cami", 1111));
-           put(3, new Contato("Jon", 2222));
-        }};
+        Map<Integer, Contato> agenda = new HashMap<>();
+        agenda.put(1, new Contato("Simba", 5555));
+        agenda.put(4, new Contato("Cami", 1111));
+        agenda.put(3, new Contato("Jon", 2222));
         System.out.println(agenda);
         for (Map.Entry<Integer, Contato> entry: agenda.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
 
         System.out.println("--\tOrdem Inserção\t--");
-        Map<Integer, Contato> agenda1 = new LinkedHashMap<>() {{
-            put(1, new Contato("Simba", 5555));
-            put(4, new Contato("Cami", 1111));
-            put(3, new Contato("Jon", 2222));
-        }};
+        Map<Integer, Contato> agenda1 = new LinkedHashMap<>() ;
+        agenda1.put(1, new Contato("Simba", 5555));
+        agenda1.put(4, new Contato("Cami", 1111));
+        agenda1.put(3, new Contato("Jon", 2222));
         System.out.println(agenda1);
         for (Map.Entry<Integer, Contato> entry: agenda1.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
